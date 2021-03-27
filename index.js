@@ -1,7 +1,8 @@
 var http = require('http');
 var fs = require('fs');
 var myMoldule = require('./my_module');
-
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port',port);
 
 http.createServer(function (request,response) {
    response.writeHead(200,{'Content-type' : 'text/html'});
